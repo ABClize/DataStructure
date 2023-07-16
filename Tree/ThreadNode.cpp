@@ -22,7 +22,6 @@ int main()
     //                      "\"edges\":[{\"from\":\"12\",\"to\":\"2\"}]}";
 
     ThreadTree T;
-    ThreadNode* M=T->lchild;
     InitThreadTree(T, 'A');
     add_lchild(T, 'B');
     add_rchild(T->lchild, 'D');
