@@ -7,34 +7,34 @@ typedef struct BiTNode
     struct BiTNode *lchild,*rchild; 
 }BiTNode,*BiTree;
 
-//³õÊ¼»¯Ò»¸ö¶þ²æÊ÷
+//åˆå§‹åŒ–ä¸€ä¸ªäºŒå‰æ ‘
 void InitBiTree(BiTree &T,int root_data);
-//Îªµ±Ç°½áµãÐÂÔöÒ»¸ö×óº¢×Ó
+//ä¸ºå½“å‰ç»“ç‚¹æ–°å¢žä¸€ä¸ªå·¦å­©å­
 void add_lchild(BiTNode* n,int data);
-//Îªµ±Ç°½áµãÐÂÔöÒ»¸öÓÒº¢×Ó
+//ä¸ºå½“å‰ç»“ç‚¹æ–°å¢žä¸€ä¸ªå³å­©å­
 void add_rchild(BiTNode* n,int data);
-//·ÃÎÊ½áµã
+//è®¿é—®ç»“ç‚¹
 void visit(BiTNode* n);
-//ÏÈÐò±éÀú
+//å…ˆåºéåŽ†
 void PreOrder(BiTree T);
-//ÖÐÐò±éÀú
+//ä¸­åºéåŽ†
 void InOrder(BiTree T);
-//ºóÐò±éÀú
+//åŽåºéåŽ†
 void PostOrder(BiTree T);
-//´´½¨Ò»¸öÏëÒªµÄ¶þ²æÊ÷
+//åˆ›å»ºä¸€ä¸ªæƒ³è¦çš„äºŒå‰æ ‘
 void CreatBiTree(BiTree &T);
 
 int main()
 {
     BiTree T;
     CreatBiTree(T);
-    printf("ÏÈÐò±éÀú½á¹ûÎª£º");
+    printf("å…ˆåºéåŽ†ç»“æžœä¸ºï¼š");
     PreOrder(T);
     printf("\n");
-    printf("ÖÐÐò±éÀú½á¹ûÎª£º");
+    printf("ä¸­åºéåŽ†ç»“æžœä¸ºï¼š");
     InOrder(T);
     printf("\n");
-    printf("ºóÐò±éÀú½á¹ûÎª£º");
+    printf("åŽåºéåŽ†ç»“æžœä¸ºï¼š");
     PostOrder(T);
     return 0;
 }
@@ -49,7 +49,7 @@ void InitBiTree(BiTree &T,int root_data)
 }
 void add_lchild(BiTNode* n,int data)
 {
-    BiTNode* p=(BiTNode*)malloc(sizeof(BiTNode));//ÐÂ½áµã
+    BiTNode* p=(BiTNode*)malloc(sizeof(BiTNode));//æ–°ç»“ç‚¹
     p->data=data;
     p->lchild=NULL;
     p->rchild=NULL;
@@ -57,7 +57,7 @@ void add_lchild(BiTNode* n,int data)
 }
 void add_rchild(BiTNode* n,int data)
 {
-    BiTNode* p=(BiTNode*)malloc(sizeof(BiTNode));//ÐÂ½áµã
+    BiTNode* p=(BiTNode*)malloc(sizeof(BiTNode));//æ–°ç»“ç‚¹
     p->data=data;
     p->lchild=NULL;
     p->rchild=NULL;
