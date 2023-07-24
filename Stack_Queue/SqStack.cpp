@@ -5,21 +5,21 @@
 
 typedef struct SqStack
 {
-    int data[MaxSize];//´æ·ÅÕ»ÖĞµÄÔªËØ
-    int top;//Õ»¶¥Ö¸Õë
+    int data[MaxSize];//å­˜æ”¾æ ˆä¸­çš„å…ƒç´ 
+    int top;//æ ˆé¡¶æŒ‡é’ˆ
 }SqStack;
 
-//³õÊ¼»¯Ò»¸ö¿ÕÕ»S
+//åˆå§‹åŒ–ä¸€ä¸ªç©ºæ ˆS
 void InitStack(SqStack &S);
-//ÅĞ¶ÏÕ»ÊÇ·ñÎª¿Õ
+//åˆ¤æ–­æ ˆæ˜¯å¦ä¸ºç©º
 bool StackEmpty(SqStack S);
-//½øÕ»£¬ÈôÕ»Î´Âú£¬Ôò½«x¼ÓÈë³ÉÎªÕ»¶¥
+//è¿›æ ˆï¼Œè‹¥æ ˆæœªæ»¡ï¼Œåˆ™å°†xåŠ å…¥æˆä¸ºæ ˆé¡¶
 void Push(SqStack &S,int x);
-//³öÕ»£¬ÈôÕ»·Ç¿Õ£¬Ôòµ¯³öÕ»¶¥ÔªËØ²¢ÓÃx_popped·µ»Ø
+//å‡ºæ ˆï¼Œè‹¥æ ˆéç©ºï¼Œåˆ™å¼¹å‡ºæ ˆé¡¶å…ƒç´ å¹¶ç”¨x_poppedè¿”å›
 void Pop(SqStack &S,int &x_popped);
-//¶ÁÕ»¶¥ÔªËØ£¬ÈôÕ»·Ç¿ÕÔòÓÃx_top·µ»ØÕ»¶¥ÔªËØ
+//è¯»æ ˆé¡¶å…ƒç´ ï¼Œè‹¥æ ˆéç©ºåˆ™ç”¨x_topè¿”å›æ ˆé¡¶å…ƒç´ 
 void GetTop(SqStack S,int &x_top);
-//Ïú»ÙÕ»£¬²¢ÊÍ·ÅÕ»SÕ¼ÓÃµÄ´æ´¢¿Õ¼ä
+//é”€æ¯æ ˆï¼Œå¹¶é‡Šæ”¾æ ˆSå ç”¨çš„å­˜å‚¨ç©ºé—´
 void DestroyStack(SqStack &S);
 
 int main()
@@ -58,7 +58,7 @@ void Push(SqStack &S,int x)
 {
     if (S.top>=MaxSize-1)
     {
-        printf("Õ»ÒÑÂú£¬ÎŞ·¨Ñ¹Õ»!\n");
+        printf("æ ˆå·²æ»¡ï¼Œæ— æ³•å‹æ ˆ!\n");
         return;
     }
     S.top++;
@@ -68,17 +68,17 @@ void Pop(SqStack &S,int &x_popped)
 {
     if (StackEmpty(S))
     {
-        printf("Õ»Îª¿Õ£¡\n");
+        printf("æ ˆä¸ºç©ºï¼\n");
         return;
     }
     x_popped=S.data[S.top];
-    S.top--;//´ËÊ±Ö»ÊÇ´ÓÂß¼­ÉÏÉ¾³ıÁË¸ÃÊı¾İ£¬ÆäÊµ¸ÃÊı¾İ»¹²ĞÁôÔÚÄÚ´æÖĞ
+    S.top--;//æ­¤æ—¶åªæ˜¯ä»é€»è¾‘ä¸Šåˆ é™¤äº†è¯¥æ•°æ®ï¼Œå…¶å®è¯¥æ•°æ®è¿˜æ®‹ç•™åœ¨å†…å­˜ä¸­
 }
 void GetTop(SqStack S,int &x_top)
 {
     if (StackEmpty(S))
     {
-        printf("Õ»Îª¿Õ£¡\n");
+        printf("æ ˆä¸ºç©ºï¼\n");
         return;
     }
     x_top=S.data[S.top];
