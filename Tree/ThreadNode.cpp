@@ -5,21 +5,19 @@ typedef struct ThreadNode
 {
     char data;
     ThreadNode *lchild, *rchild;
-    int ltag, rtag; // ltag=1表示指向前驱，rtag=1表示指向后继
+    int ltag, rtag; // ltag=1琛ㄧず鎸囧悜鍓嶉┍锛宺tag=1琛ㄧず鎸囧悜鍚庣户
 } ThreadNode, *ThreadTree;
 
-//初始化一个线索二叉树
+//鍒濆鍖栦竴涓嚎绱簩鍙夋爲
 void InitThreadTree(ThreadTree &T, char root_data);
-//为当前结点新增一个左孩子
+//涓哄綋鍓嶇粨鐐规柊澧炰竴涓乏瀛╁瓙
 void add_lchild(ThreadNode *n, char data);
-//为当前结点新增一个右孩子
+//涓哄綋鍓嶇粨鐐规柊澧炰竴涓彸瀛╁瓙
 void add_rchild(ThreadNode *n, char data);
 
 int main()
 {
-    // string myGraphJson = "{\"kind\":{\"graph\":true},"
-    //                      "\"nodes\":[{\"id\":\"12\"},{\"id\":\"2\"},{\"id\":\"T\"}],"
-    //                      "\"edges\":[{\"from\":\"12\",\"to\":\"2\"}]}";
+    
 
     ThreadTree T;
     InitThreadTree(T, 'A');
