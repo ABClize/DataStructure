@@ -50,7 +50,7 @@ int main()
 void InitList(LinkList &L)
 {
     L=(LNode*)malloc(sizeof(LNode));//L是头指针，指向头节点
-    L->next=NULL;//L指向的头节点的next为空，注意不是L.next（L的next）为空
+    L->next=NULL;//L指向的头节点的next为空，注意不是L.next（L是一个指针，不是结构体，它没有next）
 }
 void Print_LinkList(LinkList L)
 {
